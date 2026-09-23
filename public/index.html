@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BookNest — Premium Online Book Store</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="toast" class="toast"></div>
+<header class="site-header">
+  <div class="header-main container">
+    <a class="brand" href="#top"><span class="brand-icon">📚</span><span>Book<span>Nest</span></span></a>
+    <div class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search by title, author or category..."></div>
+    <button id="menuBtn" class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav id="mainNav" class="main-nav">
+      <button data-action="orders" class="nav-item">Orders &amp; Returns</button>
+      <button data-action="likes" class="nav-item">♥ Liked <b id="likeCount">0</b></button>
+      <button data-action="account" class="nav-item account-nav">👤 <span id="headerUser">Sign In</span></button>
+      <button data-action="logout" id="logoutBtn" class="nav-item logout-nav hidden">Logout</button>
+      <button data-action="cart" class="nav-item">🛒 Cart <b id="cartCount">0</b></button>
+    </nav>
+  </div>
+</header>
+<main id="top">
+<section class="hero"><div class="container hero-grid"><div><p class="eyebrow">CURATED FOR READERS</p><h1>Stories that stay <em>with you.</em></h1><p class="hero-copy">Discover bestselling fiction, inspiring self-help, technology classics and more — all in one elegant reading destination.</p><div class="hero-actions"><button class="primary" data-scroll="books">Explore Books →</button><button class="secondary" data-action="orders">Orders &amp; Returns</button></div><div class="trust"><span>✓ Secure Checkout</span><span>✓ Easy Returns</span><span>✓ Fast Delivery</span></div></div><div class="hero-books"><div class="hero-card h1"><img src="https://covers.openlibrary.org/b/isbn/9780857197689-L.jpg?default=false" alt="The Psychology of Money" onerror="this.onerror=null;this.src='https://covers.openlibrary.org/b/isbn/9781612680194-L.jpg?default=false';"></div><div class="hero-card h2"><img src="https://covers.openlibrary.org/b/isbn/9780547928227-L.jpg?default=false" alt="The Hobbit" onerror="this.onerror=null;this.src='https://covers.openlibrary.org/b/isbn/9780062315007-L.jpg?default=false';"></div><div class="hero-card h3"><img src="https://covers.openlibrary.org/b/isbn/9781612680194-L.jpg?default=false" alt="Rich Dad Poor Dad" onerror="this.onerror=null;this.src='https://covers.openlibrary.org/b/isbn/9780857197689-L.jpg?default=false';"></div></div></div></section>
+<section class="benefits"><div class="container benefit-grid"><div>🚚 <strong>Fast Delivery</strong><small>Across India</small></div><div>🔒 <strong>Secure Checkout</strong><small>Protected account</small></div><div>↩ <strong>Easy Returns</strong><small>Simple request flow</small></div><div>💳 <strong>Multiple Payments</strong><small>UPI · Card · COD</small></div></div></section>
+<section id="books" class="books-section container"><div class="section-head"><div><p class="eyebrow">BOOK COLLECTION</p><h2>Find your next favorite</h2></div><div class="controls"><select id="categoryFilter"><option value="all">All Categories</option></select><select id="sortFilter"><option value="featured">Featured</option><option value="priceLow">Price: Low to High</option><option value="priceHigh">Price: High to Low</option><option value="rating">Top Rated</option><option value="name">Name A–Z</option></select></div></div><div id="categoryChips" class="chips"></div><div id="bookGrid" class="book-grid"></div><div id="emptyState" class="empty hidden">No books found. Try another search or category.</div></section>
+<section class="newsletter"><div class="container newsletter-inner"><div><p class="eyebrow">BOOKNEST NOTES</p><h2>New books, thoughtful picks.</h2><p>Get occasional reading recommendations and store updates.</p></div><form id="newsletterForm"><input type="email" required placeholder="Your email address"><button class="primary">Subscribe</button></form></div></section>
+</main>
+<footer><div class="container footer-inner"><strong>BookNest</strong><span>© 2026 BookNest · Premium Online Book Store</span><span>Made for readers.</span></div></footer>
+
+<div id="modalBackdrop" class="modal-backdrop hidden"></div>
+<div id="bookModal" class="modal hidden"></div>
+<div id="authModal" class="modal small hidden"></div>
+<div id="checkoutModal" class="modal hidden"></div>
+<div id="ordersModal" class="modal wide hidden"></div>
+<div id="likesModal" class="modal wide hidden"></div>
+<script src="script.js"></script>
+</body></html>

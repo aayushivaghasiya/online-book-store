@@ -1,0 +1,9 @@
+{
+  "name": "booknest-complete-online-book-store",
+  "version": "2.0.0",
+  "description": "Responsive premium online book store with authentication, cart, checkout, likes, orders and returns.",
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "dev": "node server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "bcryptjs": "^2.4.3", "express": "^4.21.2", "uuid": "^11.0.5" }
+}
